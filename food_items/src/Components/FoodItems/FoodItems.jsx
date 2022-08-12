@@ -19,7 +19,7 @@ function FoodItems() {
     return navigate(`/${e.code}`);
   }
   return (
-    <>
+      <div className="container">
       <Navbar />
       <div className="split">
         <div className="foodlist">Food List</div>
@@ -32,7 +32,11 @@ function FoodItems() {
               className="image"
               src="https://mathworld.wolfram.com/images/eps-svg/TetrahedronProj1_500.svg"
               alt=""
+              onClick={() => {
+                handleClick(e);
+              }}
             />
+            
             <div className="name">
               <h3
                 className="gen"
@@ -47,8 +51,9 @@ function FoodItems() {
             </div>
           </div>
         ))}
+        <hr />
       </div>
-    </>
+    </div>
   );
 }
 
