@@ -1,0 +1,40 @@
+.split {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border: 1px solid bisque;
+  align-items: center;
+}
+.foodlist {
+  font-weight: bold;
+}
+.foodlist:hover {
+  cursor: pointer;
+  color: #8dd2ff;
+  text-decoration: underline;
+}
+.favorites {
+  background-color: #a4cb88;
+}
+
+.items {
+  width: 60%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border: 1px solid transparent;
+}
+.name {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  border: 1px solid transparent;
+}
+.gen:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    color: #8dd2ff;
+}
+.image:hover{
+    cursor: pointer;
+}
+

@@ -7,3 +7,10 @@
   padding-left:10px;
   background-color: #a1c399;
 }
+.title{
+    cursor: pointer;
+}
+.title:hover{
+    color: black;
+    text-decoration: underline;
+}
