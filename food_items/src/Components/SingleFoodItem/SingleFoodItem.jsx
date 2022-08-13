@@ -1,7 +1,6 @@
 import React from "react";
 import "../SingleFoodItem/SingleFoodItem.css";
 import Navbar from "../Navbar/Navbar";
-import FoodItems from "../FoodItems/FoodItems";
 import { useState } from "react";
 import { useParams } from "react-router";
 import { useEffect } from "react";
