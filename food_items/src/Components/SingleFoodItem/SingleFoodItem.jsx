@@ -7,16 +7,22 @@ import { useEffect } from "react";
 import axios from "axios";
 function SingleFoodItem() {
   let [fooditem, setFooditem] = useState({});
-  let { code } = useParams();
+  let { id } = useParams();
+
+  // useEffect(() => {
+  //   axios.get("http://localhost:8080/Items").then((res) => {
+  //     let item = res.data.filter((e) => e.code == code);
+  //     setFooditem(...item);
+  //   });
+  // }, []);
 
   useEffect(() => {
-    axios.get("http://localhost:8080/Items").then((res) => {
-      let item = res.data.filter((e) => e.code == code);
-      setFooditem(...item);
-    });
-  }, []);
+    axios
+      .get(`https://nodejs-101innovation.herokuapp.com/?id=${id}`)
+      .then((res) => setFooditem(res.data[0]));
+  }, [id]);
   return (
-    <div  className="parent">
+    <div className="parent">
       <Navbar />
       <div className="child">
         <img
@@ -32,7 +38,7 @@ function SingleFoodItem() {
             {Object.keys(fooditem).map((key, index) => {
               return (
                 <tr key={index}>
-                      <td style={{fontWeight:"bold"}} >{key}</td>
+                  <td style={{ fontWeight: "bold" }}>{key}</td>
                   <td>{fooditem[key]}</td>
                 </tr>
               );

@@ -10,7 +10,7 @@ function FoodItems() {
   let [food, setFood] = useState([]);
 
   useEffect(() => {
-    axios.get(" http://localhost:8080/Items").then((res) => {
+    axios.get("https://nodejs-101innovation.herokuapp.com/").then((res) => {
       setFood(res.data);
     });
   }, []);
@@ -19,7 +19,7 @@ function FoodItems() {
     return navigate(`/${e.code}`);
   }
   return (
-      <div className="container">
+    <div className="container">
       <Navbar />
       <div className="split">
         <div className="foodlist">Food List</div>
@@ -36,7 +36,7 @@ function FoodItems() {
                 handleClick(e);
               }}
             />
-            
+
             <div className="name">
               <h3
                 className="gen"
