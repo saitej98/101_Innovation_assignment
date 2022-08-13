@@ -1,0 +1,61 @@
+.parent {
+  width: 100%;
+  margin: auto;
+}
+.child {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 50%;
+  margin: auto;
+}
+.image {
+  width: 60%;
+  height: 60%;
+}
+p {
+  font-size: 1vw;
+  font-weight: bold;
+  margin-top: 20%;
+  justify-content: center;
+}
+table {
+  width: 30%;
+  border: 1px solid black;
+  margin: auto;
+}
+@media only screen and (min-width: 0px) and (max-width: 376px) {
+  .parent {
+    width: 100%;
+  }
+  table {
+    width: 300px;
+    border: 1px solid black;
+  }
+  td{
+    font-size:9px ;
+  }
+  p {
+    font-size: 10px;
+    font-weight: bold;
+    margin-top: 20%;
+    justify-content: center;
+  }
+}
+@media only screen and (min-width: 376px) and (max-width: 768px) {
+    .parent {
+        width: 100%;
+      }
+      table {
+        width: 300px;
+        border: 1px solid black;
+      }
+      td{
+        font-size:15px ;
+      }
+      p {
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 20%;
+        justify-content: center;
+      }
+}
